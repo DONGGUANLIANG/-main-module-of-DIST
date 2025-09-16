@@ -13,11 +13,11 @@ TCIA I-SPY2 dataset can be obtained from the [website](https://www.cancerimaging
 
 
 ## Main modules
-We have open-sourced MLN-net's main modules' code in Version1, including the source domain data augmentation module, the multi-LN structure and the branch selection strategy. 
-The backbone of MLN-net comes from [Swinunet](https://github.com/HuCaoFighting/Swin-Unet). The complete code is being collated and will be released soon.
+We have open-sourced the **core components** of **DIST (v1)**:
+- **EiT2T (Enhanced image-to-token)**: multi-scale conv fusion + local/global self-attention  
+- **ST (Spatial–Temporal embedding)**: dynamic position embedding + time embedding  
+- **AFFC (Adaptive Feature Fusion & Classification)**: adaptive weighting of before/after features for classification  
+- **Backbone:** built upon a Transformer encoder with configurable depth, heads, and MLP blocks
 
+> The complete training pipeline, dataset adapters (e.g. DICOM loader), and pretrained weights are being collated and will be released soon.
 
-## Acknowledgements
-
-Our codes are built upon [CSDG](https://github.com/cheng-01037/Causality-Medical-Image-Domain-Generalization), 
-[Swinunet](https://github.com/HuCaoFighting/Swin-Unet), and [Dual-Normalization](https://github.com/zzzqzhou/Dual-Normalization), thanks for their contribution to the community and the development of researches!
