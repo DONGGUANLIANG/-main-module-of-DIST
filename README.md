@@ -1,23 +1,14 @@
-# MLN-NET-VERSON1
+# DIST-VERSON1
 
-## MLN-net: A multi-source medical image segmentation method for clustered microcalcifications using multiple layer normalization
+## MLN-net: Dual-Input Spatio-Temporal Transformer Model: Predicting the Efficacy of Neoadjuvant Chemotherapy in Breast Cancer Based on DCE-MRI Images
 
 **Abstract**
-The accurate segmentation of clustered microcalcifications in mammography is crucial for the diagnosis and treatment of breast cancer. Despite exhibiting expert-level accuracy, recent deep learning advancements in 
-medical image segmentation provide insufficient contribution to practical applications, due to the domain shift resulting from differences in patient postures, individual gland density, and imaging modalities, etc. 
-In this paper, a novel framework named MLN-net is proposed for clustered microcalcification segmentation. It can accurately segment multi-source images using only single source images. Specifically, to rich domain 
-distribution information, we introduce a source domain image augmentation for generating multi-source images. A structure of multiple layer normalization (LN) layers is then used to construct the segmentation 
-network, which can be found efficient for clustered microcalcification segmentation in different domains. Additionally, a branch selection strategy is designed for measuring the similarity of the source domain data 
-and the target domain data. To validate the proposed MLN-net, extensive analyses including ablation experiments are performed, comparison of 12 baseline methods. MLN-net enhances segmentation quality of full-field 
-digital mammography (FFDM) and digital breast tomosynthe (DBT) images from the FFDM-DBT dataset, achieving the average Dice similarity coefficient (DSC) of 86.52% and the average Hausdorff distance (HD) of 20.49mm 
-on the source domain DBT. And it outperforms the baseline models for the task in FFDM images from both the CBIS-DDSM and FFDM-DBT dataset, achieving the average DSC of 50.78% and the average HD of 35.12mm on 
-the source domain CBIS-DDSM. Extensive experiments validate the effectiveness of MLN-net in segmenting clustered microcalcifications from different domains and its segmentation accuracy surpasses state-of-the-art 
-methods.
+To address the challenges of predicting the effectiveness of neoadjuvant chemotherapy (NACT) for breast cancer, this paper presents a Dual-Input Spatio-Temporal Transformer (DIST) model utilizing DCE-MRI images. The model integrates three core embedding modules, which significantly improve prediction accuracy and help avoid unnecessary treatments. Firstly, the enhanced Tokens-to-Token Patch Embedding (EiT2T) module maintains and amplifies structural features such as edges and textures through multi-scale feature extraction and a combined local-global attention mechanism, improving lesion detection in intricate images. Secondly, the Spatio-Temporal Embedding (ST) module merges dynamic positional and temporal embeddings within each token, enabling the model to accuractely capture and analyze pathological changes over time. Finally, the Adaptive Feature Fusion and Classification (AFFC) module combines features from various time points and adaptively models their differences, boosting the model's ability to discriminate. Using both pre-chemotherapy and post-first-cycle chemotherapy imaging, the proposed DIST model achieves an AUC of 0.924 and an accuracy of 86.9% on a proprietary breast cancer dataset, outperforming the best existing DiT model by 4.1% and 2.9%, respectively.
+These outcomes, particularly with multi-time-point DCE-MRI data, confirm our model's superior performance and practical viability.
 
 
 ## Data
-We use FFDM-DBT and CBIS-DDSM dataset to validate the proposed MLN-net. FFDM-DBT is private dataset, and due to privacy concerns, we only show a portion of the data as toy-data to show its data characteristics.
-CBIS-DDSM can be obtained from the [website](https://aistudio.baidu.com/datasetdetail/37567).
+We use a private DCE-MRI dataset and the public TCIA I-SPY2 dataset to validate the proposed DIST model. Due to privacy concerns, only a portion of the private dataset is shown as example data to illustrate its characteristics. If you require access to the full dataset, please contact the corresponding author via email.TCIA I-SPY2 dataset can be obtained from the [website](https://www.cancerimagingarchive.net/collection/ispy2/).
 
 
 ## Main modules
