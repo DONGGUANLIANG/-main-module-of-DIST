@@ -8,7 +8,8 @@ These outcomes, particularly with multi-time-point DCE-MRI data, confirm our mod
 
 
 ## Data
-We use a private DCE-MRI dataset and the public TCIA I-SPY2 dataset to validate the proposed DIST model. Due to privacy concerns, only a portion of the private dataset is shown as example data to illustrate its characteristics. If you require access to the full dataset, please contact the corresponding author via email.TCIA I-SPY2 dataset can be obtained from the [website](https://www.cancerimagingarchive.net/collection/ispy2/).
+We use a private DCE-MRI dataset and the public TCIA I-SPY2 dataset to validate the proposed DIST model. Due to privacy concerns, only a portion of the private dataset is shown as example data to illustrate its characteristics. If you require access to the full dataset, please contact the corresponding author via email.
+TCIA I-SPY2 dataset can be obtained from the [website](https://www.cancerimagingarchive.net/collection/ispy2/).
 
 
 ## Main modules
